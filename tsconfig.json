@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"rootDir": "s",
+		"outDir": "x",
+		"target": "es2023",
+		"lib": ["es2023", "dom"],
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"module": "node16",
+		"moduleResolution": "node16",
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"declaration": true,
+		"skipLibCheck": true
+	},
+	"include": [
+		"s/**/*.ts",
+		"s/**/*.tsx",
+		"s/**/*.js"
+	],
+	"exclude": [
+		"s/**/_*",
+		"assets/**/*"
+	]
+}
