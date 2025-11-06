@@ -13,12 +13,13 @@
 		"s"
 	],
 	"peerDependencies": {
-		"@e280/sly": "^0.2.0-32",
+		"@e280/sly": "^0.2.1",
+		"lit": "^3.3.1",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0"
 	},
 	"devDependencies": {
-		"@e280/science": "^0.1.2",
+		"@e280/science": "^0.1.4",
 		"@e280/scute": "^0.1.1",
 		"@types/react": "^19.2.2",
 		"@types/react-dom": "^19.2.2",
