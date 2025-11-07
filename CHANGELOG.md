@@ -10,6 +10,9 @@
 
 ## v0.2
 
+### v0.1.1
+- 🍏 add support for react 18 and 19
+
 ### v0.1.0
 - 🍏 initial release
 
