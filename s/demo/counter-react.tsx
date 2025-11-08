@@ -5,7 +5,7 @@ import {reactify} from "../fns/reactify.js"
 
 const CounterReact = reactify(CounterSly)
 
-export function renderDemo(container: Element) {
+export function renderReact(container: Element) {
 	createRoot(container).render(
 		<CounterReact props={[1]}>
 			<p>hello world</p>

@@ -1,30 +1,33 @@
 
-import {dom} from "@e280/sly/dom"
-import {View} from "@e280/sly/view"
 import {useRef, useEffect} from "react"
+import {NakedView, SlyView, View} from "@e280/sly/view"
 
-import {divify} from "./divify.js"
 import {ReactProps} from "./types.js"
 
 /** convert a sly view into a react function component */
 export function reactify<Props extends any[]>(slyView: View<Props>) {
+	SlyView.register()
+
 	return function SlyReactView({props, children}: ReactProps<Props>) {
-		const ref = useRef<HTMLDivElement | null>(null)
+		const divRef = useRef<HTMLDivElement | null>(null)
+		const nakedRef = useRef<NakedView<Props> | null>(null)
 
 		useEffect(() => {
-			const el = ref.current
+			const el = divRef.current
 			if (!el) throw new Error("ref not ready")
-			dom.render(
-				el,
-				slyView
-					.props(...props)
-					.children(children ? divify(children) : null)
-					.render(),
-			)
-			return () => void dom.render(el, null)
-		})
+			const naked = slyView.naked(el)
+			naked.render(...props)
+			nakedRef.current = naked
+		}, [])
 
-		return <div ref={ref} style={{display: "contents"}} />
+		if (nakedRef.current)
+			nakedRef.current.render(...props)
+
+		return (
+			<sly-view ref={divRef}>
+				{children}
+			</sly-view>
+		)
 	}
 }
 

@@ -17,9 +17,7 @@
 		"skipLibCheck": true
 	},
 	"include": [
-		"s/**/*.ts",
-		"s/**/*.tsx",
-		"s/**/*.js"
+		"s"
 	],
 	"exclude": [
 		"s/**/_*",
