@@ -1,6 +1,6 @@
 {
 	"name": "@e280/sly-react",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "sly's react adapters",
 	"license": "MIT",
 	"type": "module",
