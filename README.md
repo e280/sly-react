@@ -6,6 +6,10 @@
 
 convert [sly views](https://github.com/e280/sly#readme) into [react components](https://github.com/facebook/react#readme).
 
+compatible with react 18 and 19.
+
+## go go go!
+
 1. **install `@e280/sly-react`**
     ```sh
     npm i @e280/sly-react @e280/sly react react-dom
